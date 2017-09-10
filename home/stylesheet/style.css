@@ -1,0 +1,174 @@
+body
+{
+	background-color:black;
+	margin:0px;
+	font-family: "Myridan Web Pro", Myridan, serif;
+	font-size:15px;
+	
+}
+#test
+{
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	z-index:1000;
+	pointer-events: none;
+
+}
+.form-control
+{
+	width:50%;
+}
+.btn-warning
+{
+		background-color:rgb(255,122,0);
+		width: 150px;
+}
+.navbar 
+{ 
+	margin-bottom: 0; 
+	background-color:rgb(50,50,50);
+	box-shadow:0px 4px rgba(30,30,30,0.5);
+	border: 0px;
+	 border-radius: 0px;
+}
+.container
+{
+	width:70%;
+}
+p3
+{
+	font-size:35;
+}
+.navbar a
+{
+	color:rgba(255,255,255,0.5);
+}
+.navbar a:hover
+{
+	color:rgb(255,200,0);
+}
+nav
+{
+	background-color:black;
+}
+#navbarX
+{
+	background-color:rgb(50,50,50);
+	color:rgb(255,122,0);
+	margin: 0px;
+	padding:10px;
+	position:fixed;
+	width:100%;
+	font-size : 20px;
+	top:0px;
+	box-shadow: 8px 8px rgba(30,30,30,0.5);
+}
+
+
+.container2
+{
+	border-top:10px solid black;
+	z-index:1;
+	background-color:white;
+	margin:0px;
+	width:100%;
+	height:100%;
+	padding:10px;
+	font-size : 16px;
+	float:left;
+	color:white;
+	text-shadow: 2px 2px black;
+	background-color:rgb(50,50,50);
+}
+.container2:first
+{
+	border:0px !important;
+	margin-top:-10px;
+}
+#newssignup
+{
+	background-color:rgb(10,10,10);
+	background-image: url("paper.gif");
+	padding:15px;
+
+}
+.subfoot
+{
+
+
+	    background-color:rgb(0,0,0);
+		
+
+		
+}
+
+#footer
+{
+	color:rgb(255,122,0);
+	font-size : 15px;
+}
+#footer a
+{
+	color:rgb(255,122,0);
+	text-decoration: none;
+	
+}
+#footer a:hover
+{
+	color:rgb(255,255,0);
+	text-decoration: none;
+}
+
+h2
+{
+	margin:1px;
+	font-size:30px
+}
+h1
+{
+	position:relative;
+	z-index: 10;
+	color:white;
+	text-shadow: 2px 2px 4px 4px rgb(255,122,0);
+	font-size:70px;
+}
+#tac
+{
+	background-color:rgb(50,50,50);
+	float:left;
+	width:100%;
+	padding:5px;
+}
+.MainVid
+{
+	position:relative;
+		z-index: 10;
+		width:65%;
+		margin-left:17.5%;
+		box-shadow: 8px 8px rgba(30,30,30,0.5);
+}
+.backVid
+{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:100%;
+	z-index: 1;
+}
+#LoD
+{
+	background-color:rgb(50,50,50);
+	
+}
+p
+{
+	position:relative;
+	font-size : 20px;
+	color:rgb(255,255,255);
+	text-shadow: 1px 1px 1px 1px rgb(0,0,0);
+	z-index:10;
+
+}
