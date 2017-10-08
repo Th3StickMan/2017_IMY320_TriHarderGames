@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 	<html lang="en">
 		<head>
+			<br/>
 			<title>Loot or Die</title>
 			<meta charset="utf-8"> 
 			
@@ -17,156 +18,263 @@
 			 <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.2.0/snap.svg-min.js"></script>
 			<script src="scripts/torch.js"></script> 
 			<script src="scripts/videohover.js"></script>
+			<script src="scripts/ShowInfo.js"></script>
+			<script src="scripts/FindSelf.js"></script>
+			<script src="scripts/LoaderBot.js"></script>
 		</head>
 		<body>
-			<nav id ="nvb" class="navbar navbar-inverse navbar-fixed-top">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<a class="navbar-brand" href="#LoD">Loot or Die</a>
-					</div>
-					<ul class="nav navbar-nav" >
-						<li><a href="#Classes">Classes</a></li>
-						<li><a href="#Monsters">Monsters</a></li>
-						<li><a href="#City">City</a></li>
-						<li><a href="#Dungeon">Dungeon</a></li>
-						<li><a href="#News">News</a></li>
-					</ul>
-			</nav>
-			
-			<div  id="LoD" class="container2 col-xs-12">
-				<h1 align="center" >Loot or Die</h1>
-				<video class="backVid" autoplay="" mute="" loop="" muted="">
-				  <source src="vid/backgroundtest.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-				</video> 
-				<video class="MainVid" align="center" width="50%" controls>
-				  <source src="vid/midtest.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-				</video> 
-				<p align="center">Loot or Die is a co-op, action RPG coming to PC, currently in beta.</p>
-				
+			<div id="loader">
+			<img src="img/icon/icon.png" class="spinloader" alt="" > 
+			<br/>
+			Loading
 			</div>
-			<div id="Classes" class="container2 col-xs-12">
-				<h1 align="center" >Master the class</h1>
-			</div>
-			<div id="Monsters" class="container2 col-xs-12">
-				<h1 align="center" >Lurking in the dark</h1>
-				<p></p>
-			</div>
-			<div id="City" class="container2 col-xs-12">
-				<h1 align="center" >Build an empire</h1>
-			</div>
-			
-			<div id="Dungeon" class="container2 col-xs-12">
-				<h1 align="center" >Delve Deeper</h1>
-				<div class="container">
-					<div id="myCarousel" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
-						<ol class="carousel-indicators">
-							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-							<li data-target="#myCarousel" data-slide-to="1"></li>
-							<li data-target="#myCarousel" data-slide-to="2"></li>
-							<li data-target="#myCarousel" data-slide-to="3"></li>
-							<li data-target="#myCarousel" data-slide-to="4"></li>
-						</ol>
-						<!-- Wrapper for slides -->
-						<div class="carousel-inner">
-							<div class="item active">
-								<img src="a.jpg" alt="Mines" style="width:100%;">
-								<div class="carousel-caption">
-									<h3>Mines</h3>
-									<p>Explore abandoned mines.</p>
-								</div>
-							</div>
-							<div class="item">
-								<img src="a.jpg" alt="Castle" style="width:100%;">
-								<div class="carousel-caption">
-									<h3>Castle</h3>
-									<p>Raid some castles.</p>
-								</div>
-							</div>
-							<div class="item">
-								<img src="a.jpg" alt="Temple" style="width:100%;">
-								<div class="carousel-caption">
-									<h3>Temple</h3>
-									<p>Enter the forsaken temples.</p>
-								</div>
-							</div>
-							<div class="item">
-								<img src="a.jpg" alt="Caverns" style="width:100%;">
-								<div class="carousel-caption">
-									<h3>Caverns</h3>
-									<p>Overgrown and long forgoten.</p>
-								</div>
-							</div>
-							<div class="item">
-								<img src="a.jpg" alt="Keep" style="width:100%;">
-								<div class="carousel-caption">
-									<h3>Keep</h3>
-									<p>Finders Keep-ers.</p>
-								</div>
-							</div>
+			<div id="Content">
+				<nav id ="nvb" class="navbar navbar-inverse navbar-fixed-top">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#LoD" class="smooth">Loot or Die</a>
 						</div>
-						<!-- Left and right controls -->
-						<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-							<span class="glyphicon glyphicon-chevron-left"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="right carousel-control" href="#myCarousel" data-slide="next">
-							<span class="glyphicon glyphicon-chevron-right"></span>
-							<span class="sr-only">Next</span>
-						</a>
+						<ul class="nav navbar-nav" >
+							<li><a href="#Classes"class="smooth">Classes</a></li>
+							<li><a href="#Monsters"class="smooth">Monsters</a></li>
+							<li><a href="#City"class="smooth">City</a></li>
+							<li><a href="#Dungeon"class="smooth">Dungeon</a></li>
+							<li><a href="#News"class="smooth">News</a></li>
+						</ul>
+					</div>	
+				</nav>
+				
+				<div  id="LoD" class="container2 col-xs-12">
+					<h1 align="center" >Loot or Die</h1>
+					<video class="backVid" autoplay="" mute="" loop="" muted="">
+					  <source src="vid/backgroundtest.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video> 
+					<video class="MainVid" align="center" width="50%" controls>
+					  <source src="vid/midtest.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video> 
+					<p align="center">Loot or Die is a co-op, action RPG coming to PC, currently in beta.</p>
+					
+				</div>
+				<div id="Classes" class="container2 col-xs-12">
+					<h1 align="center" >Master the class</h1>
+					<div class="container">
+						<div id="myCarousel2" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+								<li data-target="#myCarousel2" data-slide-to="1"></li>
+							</ol>
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner">
+								<div class="item active">
+									<img src="img/Classes/mage.png" alt="Mage" style="width:100%;">
+									<div class="carousel-caption">
+										<h3>Mage</h3>
+										<p>Burn everything in your way.</p>
+									</div>
+								</div>
+								<div class="item">
+									<img src="img/Classes/war.png" alt="Warrior" style="width:100%;">
+									<div class="carousel-caption">
+										<h3>Warrior</h3>
+										<p>Fight with sword and shields.</p>
+									</div>
+								</div>
+							</div>
+							<!-- Left and right controls -->
+							<a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#myCarousel2" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div id="News" class="container2 col-xs-12">
-				<h1 align="center" >News</h1>
-				<p>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-				</p>
-			</div>
-			<div id="footer" align="center" >
-				<div id="newssignup" class="subfoot col-xs-12">
-					<img width="8%" src="img/team.png"/>
-					<form>
-						<h2>Sign up for the newsletter<h2>
-						<input type="text" class="form-control" placeholder="Email Address"><br/>
-						<input type="submit" value="Submit" class="btn btn-warning"/>
-					</form>
-					<br/>
-				</div>
-				<div class="subfoot">
-					<div id="subfoot1" class="subfoot col-xs-6">
-						<br/>
-						<br/>
-						<h2>STAY CONNECTED</h2>
-						<a href="https://twitter.com/"><i class="fa fa-twitter" style="font-size:40px;"></i></a>&nbsp;&nbsp;&nbsp;
-						<a href="https://youtube.com/"><i class="fa fa-youtube-play" style="font-size:40px"></i></a>&nbsp;&nbsp;&nbsp;
-						<a href="https://facebook.com/"><i class="fa fa-facebook-square" style="font-size:40px;"></i></a>&nbsp;&nbsp;&nbsp;
-						<br/>
-						<br/>
-						<br/>
-					</div>
-					<div id="subfoot2" class="subfoot col-xs-6">
-						<br/>
-						<br/>
-						<h2>CONTACT US: </h2>
-						Contact Us:<a href="mailto:info@triharder.co.za">info@triharder.co.za</a><br/>
-						Support:<a href="mailto:support@triharder.co.za">support@triharder.co.za</a><br/>
-						<br/>
-						<br/>
+				<div id="Monsters" class="container2 col-xs-12">
+					<h1 align="center" >Lurking in the dark</h1>
+					<div class="container">
+						<div id="myCarousel3" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+								<li data-target="#myCarousel3" data-slide-to="1"></li>
+							</ol>
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner">
+								<div class="item active">
+									<img src="img/Mon/tree.png" alt="Tree Golem" style="width:100%;">
+									<div class="carousel-caption">
+										<h3>Tree Golem</h3>
+										<p>His bark is worse than his bite.</p>
+									</div>
+								</div>
+								<div class="item">
+									<img src="img/Mon/shadow.png" alt="Shadow" style="width:100%;">
+									<div class="carousel-caption">
+										<h3>Shadow</h3>
+										<p>Silent but deadly.</p>
+									</div>
+								</div>
+							</div>
+							<!-- Left and right controls -->
+							<a class="left carousel-control" href="#myCarousel3" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#myCarousel3" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
 					</div>
 				</div>
+				<div id="City" class="container2 col-xs-12">
+					<h1 align="center" >Build an empire</h1>
+					
+					<table  id="Building">
+						<tr>
+							<td colspan="2"  id="BuildingCastle">
+							<img src="img/Building/Castle.png" alt="Castle" id="CastleIMG" >
+							</td>
+						</tr>
+						<tr>
+							<td id="BuildingTemple">
+								<img src="img/Building/Temple.png" alt="Temple">
+							</td>
+							<td id="BuildingTavern">
+								<img src="img/Building/Tavern.png" alt="Tavern">
+							</td>
+						</tr>
+						<tr>
+							<td id="BuildingShop">
+								<img src="img/Building/Shop.png" alt="Shop">
+							</td>
+							<td id="BuildingSmith">
+								<img src="img/Building/Smith.png" alt="Smith">
+							</td>
+						</tr>
+					</table>
+					<div id="BuildingInfo">
+					Building info here
+					</div>
+				</div>
+				
+				<div id="Dungeon" class="container2 col-xs-12">
+					<h1 align="center" >Delve Deeper</h1>
+					<div class="container">
+						<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+								<li data-target="#myCarousel" data-slide-to="1"></li>
+							</ol>
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner">
+								<div class="item active">
+									<img src="a.jpg" alt="Castle" style="width:100%;">
+									<div class="carousel-caption">
+										<h3>Castle</h3>
+										<p>Raid some castles.</p>
+									</div>
+								</div>
+								<div class="item">
+									<img src="a.jpg" alt="Temple" style="width:100%;">
+									<div class="carousel-caption">
+										<h3>Temple</h3>
+										<p>Enter the forsaken temples.</p>
+									</div>
+								</div>
+							</div>
+							<!-- Left and right controls -->
+							<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#myCarousel" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div id="News" class="container2 col-xs-12">
+					<h1 align="center" >News</h1>
+					<div id="NewsBlock">
+						<div class="NewsSnip">
+							<h3>Patch Preview v1.0<h3><div class="date">8/10/2017</div>
+							<hr/>
+							<p>A new class to be revealed.</p>
+							<p>New dungeon "The Mines" will be added.</p>
+							<p>New consumable "Rock" now you too can throw rocks.</p>
+							<hr/>
+							<a class="ReadMore" href="index.html">Read more here...</a>
+						</div>
+						<div class="NewsSnip">
+							<h3>Patch v0.9.8b live<h3><div class="date">4/10/2017</div>
+							<hr/>
+							<p>Mage Class has been added.</p>
+							<p>Warrior no longer gets stuck when using ladders.</p>
+							<p>Warrior is no longer imune to posion well on fire.</p>
+							<hr/>
+							<a class="ReadMore" href="index.html">Read more here...</a>
+						</div>
+						<div class="NewsSnip">
+							<h3>Dev Streem<h3><div class="date">24/09/2017</div>
+							<hr/>
+							<p>Developers are hosting gameplay preview on 28 Sept 2017</p>
+							<p>Join us and give us some feedback.</p>
+							<hr/>
+							<a class="ReadMore" href="index.html">Read more here...</a>
+						</div>
+					</div>
+				</div>
+				<div id="footer" align="center" >
+					<div id="newssignup" class="subfoot col-xs-12">
+						<img width="8%" src="img/team.png"/>
+						<form>
+							<h2>Sign up for the newsletter<h2>
+							<input type="text" class="form-control" placeholder="Email Address"><br/>
+							<input type="submit" value="Submit" class="btn btn-warning"/>
+						</form>
+						<br/>
+					</div>
+					<div class="subfoot">
+						<div id="subfoot1" class="subfoot col-xs-6">
+							<br/>
+							<br/>
+							<h2>STAY CONNECTED</h2>
+							<a href="https://twitter.com/"><i class="fa fa-twitter" style="font-size:40px;"></i></a>&nbsp;&nbsp;&nbsp;
+							<a href="https://youtube.com/"><i class="fa fa-youtube-play" style="font-size:40px"></i></a>&nbsp;&nbsp;&nbsp;
+							<a href="https://facebook.com/"><i class="fa fa-facebook-square" style="font-size:40px;"></i></a>&nbsp;&nbsp;&nbsp;
+							<br/>
+							<br/>
+							<br/>
+						</div>
+						<div id="subfoot2" class="subfoot col-xs-6">
+							<br/>
+							<br/>
+							<h2>CONTACT US: </h2>
+							Contact Us:<a href="mailto:info@triharder.co.za">info@triharder.co.za</a><br/>
+							Support:<a href="mailto:support@triharder.co.za">support@triharder.co.za</a><br/>
+							<br/>
+							<br/>
+						</div>
+					</div>
 
-				<div id="tac">
-					Loot or Die&trade; is a tradmark of TriHarder Games. Copyeight &copy; TriHarder Games - All Rights Reserved.
+					<div id="tac">
+						Loot or Die&trade; is a tradmark of TriHarder Games. Copyeight &copy; TriHarder Games - All Rights Reserved.
+					</div>
 				</div>
-			</div>
 			
-			<svg id="test" width="400" height="400"></svg>
+				<svg id="test" width="400" height="400"></svg>
+			</div>
+				
+			
 			
 		</body>
 	</html>
